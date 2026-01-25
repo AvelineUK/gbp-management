@@ -135,3 +135,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
 });
+
+// Progress Bar
+window.addEventListener('scroll', function() {
+    // Calculate scroll percentage
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+    // Update progress bar width
+    document.getElementById('progressBar').style.width = scrollPercentage + '%';
+});
